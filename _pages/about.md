@@ -6,6 +6,8 @@ permalink: /about/
 
 Welcome to CyRace, a blog to document my progress in learning all things Cyber.
 
+The complimentary GitHub Repo that will contain all the practical examples can be found [here](https://github.com/Gimb0/CyRace).
+
 ## Main areas of interest
 
 - Automation
