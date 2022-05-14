@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About CyRace - An ambitious plan to document 
+title: About CyRace - An ambitious learning plan
 permalink: /about/
 ---
 
