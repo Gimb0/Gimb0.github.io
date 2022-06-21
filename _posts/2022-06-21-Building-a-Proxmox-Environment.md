@@ -22,20 +22,20 @@ My plan is to configure proxmox2 as the master node
 ## Issues Connecting to Cluster
 
 The main issue I had while trying to join the proxmox cluster from proxmox1 was:
-```console
+```
 * local node address: cannot use IP '192.168.1.6', not found on local node!
 ```
 
 To troubleshoot this I started by testing the network connection.
 
 From proxmox1 I ran:
-```console
+```
 ping -c 3 192.168.1.6
 ```
 which showed the connection working.
 
 I then tested ssh access by:
-```console
+```
 root@proxmox1:~# ssh root@192.168.1.6
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
@@ -54,16 +54,16 @@ RSA host key for 192.168.1.6 has changed and you have requested strict checking.
 Host key verification failed.
 ```
 which showed a certificate issue. This was resolved using the provided command:
-```console
+```
 ssh-keygen -f "/etc/ssh/ssh_known_hosts" -R "192.168.1.6"
 ```
 
 Now SSH was working from proxmox1 to proxmox2 and vice versa.
 However this did not resolve the error I was receiving while trying to join the cluster.
 Looking back at the error "'192.168.1.6', not found on local node!" I started to think it was to do with a system network issue.
-I edited the `/etc/hosts` file and added both proxmox servers.
+I edited the `/etc/hosts` file on both servers by adding both proxmox servers.
 
-```console
+```
 127.0.0.1 localhost.localdomain localhost
 192.168.1.5 proxmox1.gimboscloud.dev proxmox1
 192.168.1.6 proxmox2.gimboscloud.dev proxmox2
