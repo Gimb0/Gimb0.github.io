@@ -60,7 +60,7 @@ ssh-keygen -f "/etc/ssh/ssh_known_hosts" -R "192.168.1.6"
 
 Now SSH was working from proxmox1 to proxmox2 and vice versa.
 However this did not resolve the error I was receiving while trying to join the cluster.
-Looking back at the error "'192.168.1.6', not found on local node!" I started to think it was to do with a system network issue.
+Looking back at the error '''192.168.1.6'', not found on local node!' I started to think it was to do with a system network issue.
 I edited the `/etc/hosts` file on both servers by adding both proxmox servers.
 
 ```
