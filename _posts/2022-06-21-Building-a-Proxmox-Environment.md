@@ -78,3 +78,5 @@ ff02::3 ip6-allhosts
 ```
 
 This change is what fixed my issue with joining the proxmox cluster.
+
+![Proxmox Cluster Environment!]({{ site.baseurl }}/images/Proxmox-Cluster-Environment.png "Proxmox Cluster Environment")
