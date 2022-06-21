@@ -14,8 +14,11 @@ Currently in my Homelab I have 2 Dell R710 Servers that make up my homelab.
 I also have a raspberry pi 4 that runs pi-hole and manages my local DNS.
 These are in a rack in my garage and are connected by a small 10 port switch.
 
+
 proxmox1 - 192.168.1.5
+
 proxmox2 - 192.168.1.6
+
 
 My plan is to configure proxmox2 as the master node
 
