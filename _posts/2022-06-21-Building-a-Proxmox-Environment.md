@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Proxmox Cluster Environment
-permalink: /about/
+permalink: /Proxmox-Cluster-Creation
 ---
 
 Creating a Proxmox Cluster Environment.
